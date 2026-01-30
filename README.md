@@ -1,8 +1,13 @@
 # lakes_cluster (_Stevens et al.,_ In progress)
-Recreate figures and movies in Stevens et al. (202?): _Supraglacial lake hydro-fracture not advanced inland by lower-elevation lake drainages in Kalaallit Nunaat/Greenland._ Figure and movie recreation requires the FigShare data deposition corresponding to this manuscript.
+Recreate figures and movies in Stevens et al. (202?): _Supraglacial lake hydro-fracture not advanced inland by lower-elevation lake drainages in Kalaallit Nunaat/Greenland._ 
+
+## System requirements
+This code requires MATLAB R2023B to run. To install, download this code repository to your computer (~150 MB). Also download the FigShare data deposition corresponding to this manuscript (~33 GB). A typical install time on a "normal" desktop computer should be <20 minutes, depending on internet speed. 
+
+Next, follow the instructions in each subsection below for running data-processing and figure-creation scripts. The expected output are the paper figures and reproductions of all quantitative results presented in the manuscript. A typical run time on a "normal" desktop computer will be a few minutes for each figure-producing script. The **nevis** subglacial-hydrology model (_Hewitt,_ 2013) takes ~12 hours to run over a full melt season.
 
 ## Probabilistic temporal-cluster analysis
-Within [homogeneous_poisson](homogeneous_poisson/), plotting scripts for counting up clusters of lake-drainage events, organized by drainage mechanism: 
+Within [homogeneous_poisson](homogeneous_poisson/), scripts for counting up clusters of lake-drainage events, organized by drainage mechanism: 
     
 + hydro-fracture events (Fig. 3); 
 + moulin events (Fig. 4a–d); and 
@@ -11,7 +16,7 @@ Within [homogeneous_poisson](homogeneous_poisson/), plotting scripts for countin
 Daily runoff accumulated at ice-sheet surface elevations within study region of interest courtesy of _Noël et al._ (2019). 
 
 ## GNSS-derived quantities
-Within [GNSS_derived](GNSS_derived/), plotting scripts for figures containing GNSS-observed and/or GNSS-derived estimates of:
+Within [GNSS_derived](GNSS_derived/), scripts for figures containing GNSS-observed and/or GNSS-derived estimates of:
 
 + station horizontal and vertical positions (Supplementary Information);
 + station horizontal velocities (Supplementary Information);
@@ -20,7 +25,7 @@ Within [GNSS_derived](GNSS_derived/), plotting scripts for figures containing GN
 + map of lake-drainage mechanisms, lake-to-lake supraglacial connections, and GNSS stations (Fig. 1).
 
 ## Physical plausibility of hydro-fracture event clusters
-Within [physical_plausibility](physical_plausibility/), plotting scripts for physical plausibility of hydro-fracture event clusters C1–C6 (Figs. 7 and 8; Supplementary Information). If the user prefers not to run the Network Inversion Filter (NIF) code, three additional .mat files are needed from the _Stevens et al._ (2024) [lake_strain](https://github.com/goodnesglaciers/lake_strain) repository; alternatively, these large (>25 MB) .mat files may be downloaded on Dropbox [here](https://www.dropbox.com/scl/fo/bbcwl97e8qg0yb9jehusz/h?rlkey=dfclznsaqxzcxtidm9w6gim5j&dl=0).
+Within [physical_plausibility](physical_plausibility/), scripts for physical plausibility of hydro-fracture event clusters C1–C6 (Figs. 7 and 8; Supplementary Information). If the user prefers not to run the Network Inversion Filter (NIF) code, three additional .mat files are needed from the _Stevens et al._ (2024) [lake_strain](https://github.com/goodnesglaciers/lake_strain) repository; alternatively, these large (>25 MB) .mat files may be downloaded on Dropbox [here](https://www.dropbox.com/scl/fo/bbcwl97e8qg0yb9jehusz/h?rlkey=dfclznsaqxzcxtidm9w6gim5j&dl=0).
 
 ## Subglacial-hydrology model
 Within [nevis_lakes_cluster](nevis_lakes_cluster/), model-run and plotting scripts for the **nevis** subglacial-hydrology model (_Hewitt,_ 2013), which is equivalent to the model version used in _Stevens et al._ (2022) [nevis_helheim](https://github.com/goodnesglaciers/nevis_helheim), save for parameter-value choices and the Central-West-Greenland model domain.  
