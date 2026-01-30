@@ -2,9 +2,9 @@
 Recreate figures and movies in Stevens et al. (202?): _Ice-sheet hydro-fracture not advanced inland by lower-elevation lake drainages in Kalaallit Nunaat._ 
 
 ## System requirements
-This code requires MATLAB R2023B (or a more recent MATLAB release) to run. The code has been tested on MATLAB R2023B. To install, download this code repository to your computer (~900 MB). Also download the FigShare data deposition corresponding to this manuscript (~33 GB). A typical install time on a "normal" desktop computer should be <20 minutes, depending on internet speed. 
+This code requires MATLAB R2023B (or a more recent MATLAB release) to run. The code has been tested on MATLAB R2023B. To install, download this code repository to your computer (~900 MB). Also download the FigShare data deposition corresponding to this manuscript (~33 GB). A typical install time on a desktop computer should be <20 minutes, depending on internet speed. 
 
-Next, follow the instructions in each subsection below for running data-processing and figure-creation scripts. The expected output are the paper figures and reproductions of all quantitative results presented in the manuscript. A typical run time on a "normal" desktop computer will be a few minutes for each figure-producing script. The **nevis** subglacial-hydrology model (_Hewitt,_ 2013) takes ~12 hours to run over a full melt season.
+Next, follow the instructions in each subsection below for running data-processing and figure-creation scripts. The expected outputs are reproductions of all quantitative results presented in the manuscript and the paper figures. A typical run time on a desktop computer will be a few minutes for each figure-producing script. The **nevis** subglacial-hydrology model (_Hewitt,_ 2013) takes ~12 hours to run over a full melt season.
 
 ## Probabilistic temporal-cluster analysis
 Within [homogeneous_poisson](homogeneous_poisson/), scripts for counting up clusters of lake-drainage events, organized by drainage mechanism: 
@@ -23,6 +23,8 @@ Within [GNSS_derived](GNSS_derived/), scripts for figures containing GNSS-observ
 + station bed-separation rates (Supplementary Information);
 + inter-station strain rates (Figs. 5 and 6; Supplementary Information); and,
 + map of lake-drainage mechanisms, lake-to-lake supraglacial connections, and GNSS stations (Fig. 1).
+
+Daily runoff courtesy of _Noël et al._ (2019). 
 
 ## Physical plausibility of hydro-fracture event clusters
 Within [physical_plausibility](physical_plausibility/), scripts for physical plausibility of hydro-fracture event clusters C1–C6 (Figs. 7 and 8; Supplementary Information).
