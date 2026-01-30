@@ -1,4 +1,4 @@
-# lakes_cluster (_Stevens et al.,_ In progress)
+# lakes_cluster (_Stevens et al.,_ 202?)
 Recreate figures and movies in Stevens et al. (202?): _Ice-sheet hydro-fracture not advanced inland by lower-elevation lake drainages in Kalaallit Nunaat._ 
 
 ## System requirements
