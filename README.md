@@ -1,5 +1,5 @@
 # lakes_cluster (_Stevens et al.,_ In progress)
-Recreate figures and movies in Stevens et al. (202?): _Supraglacial lake hydro-fracture not advanced inland by lower-elevation lake drainages in Kalaallit Nunaat/Greenland._
+Recreate figures and movies in Stevens et al. (202?): _Supraglacial lake hydro-fracture not advanced inland by lower-elevation lake drainages in Kalaallit Nunaat/Greenland._ Figure and movie recreation requires the FigShare data deposition corresponding to this manuscript.
 
 ## Probabilistic temporal-cluster analysis
 Within [homogeneous_poisson](homogeneous_poisson/), plotting scripts for counting up clusters of lake-drainage events, organized by drainage mechanism: 
