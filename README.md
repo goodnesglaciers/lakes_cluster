@@ -1,5 +1,5 @@
 # lakes_cluster (_Stevens et al.,_ In progress)
-Recreate figures and movies in Stevens et al. (202?): _Ice-sheet hydro-fracture not advanced inland by lower-elevation lake drainages in Kalaallit Nunaat/Greenland._ 
+Recreate figures and movies in Stevens et al. (202?): _Ice-sheet hydro-fracture not advanced inland by lower-elevation lake drainages in Kalaallit Nunaat._ 
 
 ## System requirements
 This code requires MATLAB R2023B to run. The code has been tested on MATLAB R2023B. To install, download this code repository to your computer (~150 MB). Also download the FigShare data deposition corresponding to this manuscript (~33 GB). A typical install time on a "normal" desktop computer should be <20 minutes, depending on internet speed. 
