@@ -25,7 +25,7 @@ Within [GNSS_derived](GNSS_derived/), scripts for figures containing GNSS-observ
 + map of lake-drainage mechanisms, lake-to-lake supraglacial connections, and GNSS stations (Fig. 1).
 
 ## Physical plausibility of hydro-fracture event clusters
-Within [physical_plausibility](physical_plausibility/), scripts for physical plausibility of hydro-fracture event clusters C1–C6 (Figs. 7 and 8; Supplementary Information). If the user prefers not to run the Network Inversion Filter (NIF) code, three additional .mat files are needed from the _Stevens et al._ (2024) [lake_strain](https://github.com/goodnesglaciers/lake_strain) repository; alternatively, these large (>25 MB) .mat files may be downloaded on Dropbox [here](https://www.dropbox.com/scl/fo/bbcwl97e8qg0yb9jehusz/h?rlkey=dfclznsaqxzcxtidm9w6gim5j&dl=0).
+Within [physical_plausibility](physical_plausibility/), scripts for physical plausibility of hydro-fracture event clusters C1–C6 (Figs. 7 and 8; Supplementary Information).
 
 ## Subglacial-hydrology model
 Within [nevis_lakes_cluster](nevis_lakes_cluster/), model-run and plotting scripts for the **nevis** subglacial-hydrology model (_Hewitt,_ 2013), which is equivalent to the model version used in _Stevens et al._ (2022) [nevis_helheim](https://github.com/goodnesglaciers/nevis_helheim), save for parameter-value choices and the Central-West-Greenland model domain.  
