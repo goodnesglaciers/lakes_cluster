@@ -48,6 +48,13 @@ tight_MLOW = 189:205;
 tight_200s = 195:205;
 tight_300s = 195:205;
 
+% Tight constraints on all days: (spurious diurnal signals due to
+% multipath are not related to glacier physics/hydrology) 
+% tight_100s = 170:230;
+% tight_200s = 170:230;
+% tight_300s = 170:230;
+% tight_MLOW = 170:230; 
+
 %% COMBINE TIGHT AND LOOSE RECORDS FOR CDOT
 % make timeseries logical for where to use 'tight' strain rates
 
@@ -888,4 +895,4 @@ xlim([plot_x(1) plot_x(2)]); ylim([plot_y(1) plot_y(2)]);
 axe1.Layer = 'top';   axe1.ClippingStyle = "rectangle";  
 
 %% print figure
-print(gcf,'-dpng','-r300',sprintf('../../paperfigs/paperfig6_distillations_2023_260116.png')); 
+print(gcf,'-dpng','-r300',sprintf('../../paperfigs/paperfig6_distillations_2023_260116_repository.png')); 

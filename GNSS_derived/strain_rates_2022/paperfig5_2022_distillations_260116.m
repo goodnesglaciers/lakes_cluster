@@ -39,7 +39,7 @@ station_names_short = upper(daily_strain_rates_loose.station_names); % less SQ33
 load('daily_strain_rates_2022R_30min_BF2_UP4_sZERO_clean_w18_t6_260119.mat') % 30-min
 daily_strain_rates_tight = daily_strain_rates_2023;
 
-% Tight constraints at station-days: 
+% Tight constraints at specific station-days: 
 tight_100s = 187:196;
 tight_200s = 206:217;
 tight_300s = 206:212;
@@ -47,6 +47,16 @@ tight_MLOW = 207:217;
 tight_MHIH = 207:217;
 tight_QIET = 192:196;
 tight_QIET2 = 210:218;
+
+% Tight constraints on all days: (spurious diurnal signals due to
+% multipath are not related to glacier physics/hydrology) 
+% tight_100s = 170:230;
+% tight_200s = 170:230;
+% tight_300s = 170:230;
+% tight_MLOW = 170:230; 
+% tight_MHIH = 170:230;
+% tight_QIET = 170:230;
+% tight_QIET2 = 170:230;
 
 %% COMBINE TIGHT AND LOOSE RECORDS FOR CDOT
 % make timeseries logical for where to use 'tight' strain rates
@@ -68,7 +78,7 @@ for i=1 % MHIH
     end
 end
 
-for i=2:3 % MLOW, QIET
+for i=2 % MLOW
     % first fill with loose constraints (longer sliding LS window)
     % loose daily_epsilon_zz
     daily_epsilon_zz(i).t22 = daily_epsilon_zz_loose(i).t22; % time
@@ -360,15 +370,16 @@ end
 plot(strain_time, squeeze(daily_strain_rates_combo.lon_yr_100s(4,5,:)-daily_strain_rates_combo.lon_yr_100s(4,5,ID_t0)),'-','LineWidth',linewidth_strain,'Color',CMap(1,:)); hold on; %SQ11-12
 plot(strain_time, squeeze(daily_strain_rates_combo.lon_yr_100s(5,7,:)-daily_strain_rates_combo.lon_yr_100s(5,7,ID_t0)),'-','LineWidth',linewidth_strain,'Color',CMap(2,:)); %SQ12-14
 plot(strain_time(1:1950), squeeze(daily_strain_rates_combo.lon_yr_100s(8,9,1:1950)-daily_strain_rates_combo.lon_yr_100s(8,9,ID_t0)),'-','LineWidth',linewidth_strain,'Color',CMap(3,:)); %SQ15-16
-% strain errors
-patch([strain_time; flipud(strain_time)], ...
-    [squeeze(daily_strain_rates_combo.lon_yr_100s(4,5,:)+3.*daily_strain_rates_combo.delta_lon_yr_100s(4,5,:)-daily_strain_rates_combo.lon_yr_100s(4,5,ID_t0));...
-    flipud(squeeze(daily_strain_rates_combo.lon_yr_100s(4,5,:)-3.*daily_strain_rates_combo.delta_lon_yr_100s(4,5,:)-daily_strain_rates_combo.lon_yr_100s(4,5,ID_t0)))],...
-    [0.7 0.7 0.7],'EdgeColor', 'none','FaceAlpha', 0.75); 
-patch([strain_time; flipud(strain_time)], ...
-    [squeeze(daily_strain_rates_combo.lon_yr_100s(5,7,:)+3.*daily_strain_rates_combo.delta_lon_yr_100s(5,7,:)-daily_strain_rates_combo.lon_yr_100s(5,7,ID_t0));...
-    flipud(squeeze(daily_strain_rates_combo.lon_yr_100s(5,7,:)-3.*daily_strain_rates_combo.delta_lon_yr_100s(5,7,:)-daily_strain_rates_combo.lon_yr_100s(5,7,ID_t0)))],...
-    [0.7 0.7 0.7],'EdgeColor', 'none','FaceAlpha', 0.75); 
+% strain-rate error envelopes (any data gaps --> error estimate == 0)
+tt = [strain_time; flipud(strain_time)];
+ee = [squeeze(daily_strain_rates_combo.lon_yr_100s(4,5,:)+3.*daily_strain_rates_combo.delta_lon_yr_100s(4,5,:)-daily_strain_rates_combo.lon_yr_100s(4,5,ID_t0));...
+    flipud(squeeze(daily_strain_rates_combo.lon_yr_100s(4,5,:)-3.*daily_strain_rates_combo.delta_lon_yr_100s(4,5,:)-daily_strain_rates_combo.lon_yr_100s(4,5,ID_t0)))];
+nanIdx = isnan(ee); ee(nanIdx) = 0;
+patch(tt,ee,[0.7 0.7 0.7],'EdgeColor','none','FaceAlpha',0.5); hold on;
+ee = [squeeze(daily_strain_rates_combo.lon_yr_100s(5,7,:)+3.*daily_strain_rates_combo.delta_lon_yr_100s(5,7,:)-daily_strain_rates_combo.lon_yr_100s(5,7,ID_t0));...
+    flipud(squeeze(daily_strain_rates_combo.lon_yr_100s(5,7,:)-3.*daily_strain_rates_combo.delta_lon_yr_100s(5,7,:)-daily_strain_rates_combo.lon_yr_100s(5,7,ID_t0)))];
+nanIdx = isnan(ee); ee(nanIdx) = 0;
+patch(tt,ee,[0.7 0.7 0.7],'EdgeColor','none','FaceAlpha',0.5); hold on;
 patch([strain_time(1:1950); flipud(strain_time(1:1950))], ...
     [squeeze(daily_strain_rates_combo.lon_yr_100s(8,9,1:1950)+3.*daily_strain_rates_combo.delta_lon_yr_100s(8,9,1:1950)-daily_strain_rates_combo.lon_yr_100s(8,9,ID_t0));...
     flipud(squeeze(daily_strain_rates_combo.lon_yr_100s(8,9,1:1950)-3.*daily_strain_rates_combo.delta_lon_yr_100s(8,9,1:1950)-daily_strain_rates_combo.lon_yr_100s(8,9,ID_t0)))],...
@@ -503,7 +514,7 @@ plot(strain_time(index_182:end), squeeze(daily_strain_rates_combo.lon_yr_200s(10
 plot(strain_time(index_182:end), squeeze(daily_strain_rates_combo.lon_yr_200s(11,12,index_182:end)-daily_strain_rates_combo.lon_yr_200s(11,12,ID_t0)),'-','LineWidth',linewidth_strain); %SQ22-23
 plot(strain_time(index_182:end), squeeze(daily_strain_rates_combo.lon_yr_200s(14,15,index_182:end)-daily_strain_rates_combo.lon_yr_200s(14,15,ID_t0)),'-','LineWidth',linewidth_strain); %SQ25-26
 plot(strain_time(index_182:end), squeeze(daily_strain_rates_combo.lon_yr_200s(14,16,index_182:end)-daily_strain_rates_combo.lon_yr_200s(14,16,ID_t0)),'-','LineWidth',linewidth_strain); hold on; %SQ25-27
-% strain errors
+% strain-rate error envelopes (any data gaps --> error estimate == 0)
 tt = [strain_time(index_182:end); flipud(strain_time(index_182:end))];
 ee = [squeeze(daily_strain_rates_combo.lon_yr_200s(10,12,index_182:end)+3.*daily_strain_rates_combo.delta_lon_yr_200s(10,12,index_182:end)-daily_strain_rates_combo.lon_yr_200s(10,12,ID_t0));...
     flipud(squeeze(daily_strain_rates_combo.lon_yr_200s(10,12,index_182:end)-3.*daily_strain_rates_combo.delta_lon_yr_200s(10,12,index_182:end)-daily_strain_rates_combo.lon_yr_200s(10,12,ID_t0)))];
@@ -579,7 +590,7 @@ end
 plot(strain_time(index_184:end), squeeze(daily_strain_rates_combo.lon_yr_300s(17,18,index_184:end)-daily_strain_rates_combo.lon_yr_300s(17,18,ID_t0)),'-','LineWidth',linewidth_strain,'Color',CMap(1,:)); hold on; %SQ31-34
 plot(strain_time(index_184:end), squeeze(daily_strain_rates_combo.lon_yr_300s(19,20,index_184:end)-daily_strain_rates_combo.lon_yr_300s(19,20,ID_t0)),'-','LineWidth',linewidth_strain,'Color',CMap(2,:)); %SQ35-36
 plot(strain_time(index_184:end), squeeze(daily_strain_rates_combo.lon_yr_300s(19,21,index_184:end)-daily_strain_rates_combo.lon_yr_300s(19,21,ID_t0)),'-','LineWidth',linewidth_strain,'Color',CMap(3,:)); %SQ35-37
-% strain errors
+% strain-rate error envelopes (any data gaps --> error estimate == 0)
 tt = [strain_time(index_184:end); flipud(strain_time(index_184:end))];
 ee = [squeeze(daily_strain_rates_combo.lon_yr_300s(17,18,index_184:end)+3.*daily_strain_rates_combo.delta_lon_yr_300s(17,18,index_184:end)-daily_strain_rates_combo.lon_yr_300s(17,18,ID_t0));...
     flipud(squeeze(daily_strain_rates_combo.lon_yr_300s(17,18,index_184:end)-3.*daily_strain_rates_combo.delta_lon_yr_300s(17,18,index_184:end)-daily_strain_rates_combo.lon_yr_300s(17,18,ID_t0)))];
