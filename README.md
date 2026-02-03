@@ -46,6 +46,9 @@ The model is forced by estimated rates of daily runoff courtesy of _Noël et al.
 ![classifier_2022_HFpossible_E_q_Q_250424_214](https://github.com/user-attachments/assets/d76372ab-fe37-482e-ba6f-2b9fdb42dee0)
 Repository Figure 1. Surface runoff, subglacial discharge, and lake-drainage events on 2022/214. (**upper panel**) (blue colormap) Daily surface runoff $E$ for study region courtesy of _Noël et al._ (2019). Day of year of movie frame plotted as map title. (**middle panel**) (blue colormap) Modelled subglacial discharge $q$ forced by daily, distributed surface runoff inputs shown in upper panel. In both map-view panels, ice-sheet surface elevation shown with 100-m-elevation contours in grey (_Morlighem et al.,_ 2017; 2022). GNSS stations shown with solid black triangles. Black-outlined symbols show location and drainage mechanism of supraglacial lakes, with the symbol colour indicating whether the lake is (blue) filling; (goldenrod) initially draining; (green) continuing to drain; or (grey) an empty, dry, or frozen lake basin. Lake-drainage mechanisms are: (stars) hydro-fracture, (overturned triangles) moulin, (circles) overspill, and (square) no-exit, frozen. The location and drainage timing of (diamonds) water-filled crevasses are also shown. Lakes and water-filled crevasses are first plotted in time on the day of year in which they attain $v_{crit}$, their critical volume required to hydro-fracture to the ice-sheet bed. (**bottom panel**) (solid-blue line) Surface-runoff and (dashed-blue line) basal-melt inputs summed across the model domain; proglacial discharge exiting the model domain shown in yellow. Purple vertical bar tracks time. 
 
+## License
+This repository is licensed under the CC BY-NC 4.0 License. See the [LICENSE](./LICENSE.md) file for more information.
+
 ## References
 
 Hewitt, I. J. Seasonal changes in ice sheet motion due to melt water lubrication. Earth and Planetary Science Letters 371–372, 16–25 (2013).
