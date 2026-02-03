@@ -30,7 +30,7 @@ Daily runoff courtesy of _Noël et al._ (2019).
 Within [physical_plausibility](physical_plausibility/), scripts for physical plausibility of hydro-fracture event clusters C1–C6 (Figs. 7 and 8; Supplementary Information).
 
 ## Subglacial-hydrology model
-Within [nevis_lakes_cluster](nevis_lakes_cluster/), model-run and plotting scripts for the **nevis** subglacial-hydrology model (_Hewitt,_ 2013), which is equivalent to the model version used in _Stevens et al._ (2022) [nevis_helheim](https://github.com/goodnesglaciers/nevis_helheim), save for parameter-value choices and the Central-West-Greenland model domain.  
+Within [nevis_lakes_cluster](nevis_lakes_cluster/), model-run and plotting scripts for the **nevis** subglacial-hydrology model (_Hewitt,_ 2013), which is equivalent to the model version used in _Stevens et al._ (2022) [nevis_helheim](https://github.com/goodnesglaciers/nevis_helheim), save for parameter-value choices and the central west Greenland Ice Sheet model domain.  
 
 The model is forced by estimated rates of daily runoff courtesy of _Noël et al._ (2019). Model domain requires BedMachine Greenland v.5 (_Morlighem et al.,_ 2017; 2022). Ice-sheet basal velocities of the model domain are set to surface-velocity values observed by the 2022 MEaSUREs Annual Velocity Mosaic (_Joughin et al.,_ 2015). 
 
