@@ -38,7 +38,7 @@ The model is forced by estimated rates of daily runoff courtesy of _Noël et al.
 + Model run file for 2022: nevis_lakesix_noSK_300m_ub.m
 + Model run file for 2023: nevis_lakesix_2023_noSK_300m_ub.m
 + Surface runoff, subglacial discharge, and lake-drainage events in 2022 (Supplementary Information Movie M1).
-+ Surface runoff, subglacial discharge, and lake-drainage events in 2023 (Supplementary Information Movie M1).
++ Surface runoff, subglacial discharge, and lake-drainage events in 2023 (Supplementary Information Movie M2).
 
 ### Example subglacial-hydrology model output alongside mechanistic lake-drainage catalogue: ###
 (The mechanistic lake-drainage catalogues are located in these two repositories: [mechanistic_drainage_catalogue_2022](https://github.com/goodnesglaciers/mechanistic_drainage_catalogue_2022) and [mechanistic_drainage_catalogue_2023](https://github.com/goodnesglaciers/mechanistic_drainage_catalogue_2023). The lake-drainage catalogues include figures of every image available for each lake identified by FASTER (_Williams et al.,_ 2018a; 2018b).)
