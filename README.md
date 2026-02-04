@@ -35,7 +35,7 @@ Within [nevis_lakes_cluster](nevis_lakes_cluster/), model-run and plotting scrip
 The model is forced by estimated rates of daily runoff courtesy of _Noël et al._ (2019). Model domain requires BedMachine Greenland v.5 (_Morlighem et al.,_ 2017; 2022). Ice-sheet basal velocities of the model domain are set to surface-velocity values observed by the 2022 MEaSUREs Annual Velocity Mosaic (_Joughin et al.,_ 2015). 
 
 + [nevis](nevis_lakes_cluster/nevis/): model code.
-+ Model run file for 2022: nevis_lakesix_noSK_300m_ub
++ Model run file for 2022: nevis_lakesix_noSK_300m_ub.m
 + Model run file for 2023: nevis_lakesix_2023_noSK_300m_ub.m
 + Surface runoff, subglacial discharge, and lake-drainage events in 2022 (Supplementary Information Movie M1).
 + Surface runoff, subglacial discharge, and lake-drainage events in 2023 (Supplementary Information Movie M1).
