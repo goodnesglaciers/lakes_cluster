@@ -1,5 +1,5 @@
-# lakes_cluster (_Stevens et al.,_ 202?)
-Recreate figures and movies in Stevens et al. (202?): _Ice-sheet hydro-fracture not advanced inland by lower-elevation lake drainages in Kalaallit Nunaat._ 
+# lakes_cluster (_Stevens et al.,_ 2026)
+Recreate figures and movies in Stevens et al. (2026): _Ice-sheet hydro-fracture not advanced inland by lower-elevation lake drainages in Kalaallit Nunaat._ 
 
 ## System requirements
 This code requires MATLAB R2023B (or a more recent MATLAB release) to run. The code has been tested on MATLAB R2023B. To install, download this code repository to your computer (~900 MB). Also download the FigShare data deposition corresponding to this manuscript (~33 GB). A typical install/download time on a desktop computer should be <20 minutes, depending on internet speed. 
@@ -68,6 +68,8 @@ Stevens, L. A. Tidewater-glacier response to supraglacial lake drainage (v1.0). 
 Stevens, L. A. et al. Elastic Stress Coupling Between Supraglacial Lakes. JGR Earth Surface 129, e2023JF007481 (2024).
 
 Stevens, L. A., & S. Larochelle. Elastic stress coupling between supraglacial lakes (v1.2). Zenodo. https://doi.org/10.5281/zenodo.10650188 (2024).
+
+Stevens, L. A. et al. Ice-sheet hydro-fracture not advanced inland by lower-elevation lake drainages in Kalaallit Nunaat. Nat Commun (2026).
 
 Williamson, A. G., Banwell, A. F., Willis, I. C. & Arnold, N. S. Dual-satellite (Sentinel-2 and Landsat 8) remote sensing of supraglacial lakes in Greenland. The Cryosphere 12, 3045–3065 (2018a).
 
